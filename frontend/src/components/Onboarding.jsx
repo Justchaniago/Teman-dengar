@@ -10,6 +10,7 @@ export default function Onboarding({ onComplete }) {
     hobbies: [],
     triggers: []
   });
+  const triggerOptions = ['Work stress', 'Relationship', 'Family', 'Finance', 'Health'];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,8 +60,27 @@ export default function Onboarding({ onComplete }) {
           </div>
         </div>
 
-        {/* Tambahkan Triggers Checkboxes di sini sesuai spec */}
-        
+        <div className="mt-4">
+          <label className="block text-sm font-medium mb-2">Apa yang biasanya membuatmu stress?</label>
+          <div className="flex flex-wrap gap-2">
+            {triggerOptions.map(opt => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => {
+                  const newTriggers = prefs.triggers.includes(opt)
+                    ? prefs.triggers.filter(t => t !== opt)
+                    : [...prefs.triggers, opt];
+                  setPrefs({ ...prefs, triggers: newTriggers });
+                }}
+                className={`px-3 py-1 text-xs rounded-full border ${prefs.triggers.includes(opt) ? 'bg-[#8FA998] text-white' : 'text-gray-500'}`}
+              >
+                {opt}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <button type="submit" className="w-full py-3 bg-[#D4956A] text-white rounded-xl font-bold hover:opacity-90 transition">
           Selesai & Mulai Curhat
         </button>

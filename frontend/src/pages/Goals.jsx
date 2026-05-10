@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Goals() {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold text-[#D4956A]">Halo, Teman! 👋</h1>
