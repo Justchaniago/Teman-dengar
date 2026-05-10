@@ -1,0 +1,4 @@
+- [x] Identifikasi file yang menggunakan env Firebase
+- [x] Buat rencana update env dan konfirmasi user
+- [x] Update `frontend/.env.local` dengan kredensial Firebase baru
+- [x] Finalisasi dan instruksi restart dev server
