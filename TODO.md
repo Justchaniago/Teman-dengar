@@ -1,4 +1,6 @@
-- [x] Identifikasi file yang menggunakan env Firebase
-- [x] Buat rencana update env dan konfirmasi user
-- [x] Update `frontend/.env.local` dengan kredensial Firebase baru
-- [x] Finalisasi dan instruksi restart dev server
+- [x] Update import Firestore di `frontend/src/lib/firebase.js` menjadi `initializeFirestore` + `persistentLocalCache`
+- [x] Ganti inisialisasi `db` ke `initializeFirestore(app, { localCache, experimentalForceLongPolling })`
+- [x] Verifikasi hasil akhir file
+- [x] Update `frontend/src/pages/Chat.jsx` untuk menampilkan nama user dan timestamp pada setiap bubble chat
+- [x] Tambah import `format` dari `date-fns` dan `id` dari `date-fns/locale`
+- [x] Verifikasi tampilan metadata (nama + waktu fallback "Baru saja")
